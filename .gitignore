@@ -1,0 +1,37 @@
+# Mypy cache
+.mypy_cache
+
+# Pytest cache
+.pytest_cache
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+*.pyc
+
+# IDEA
+.idea
+
+# Virtualenv
+.venv
+venv*/
+.env
+
+# Project configuration
+*.sublime*
+.vscode
+
+# Project extensions
+# !.gitignore
+logs
+*.bak
+*.egg-info
+
+# Pytest files
+.coverage
+.reports
+
+# hidden files
+.*
+!.gitmodules
+!.dockerignore
