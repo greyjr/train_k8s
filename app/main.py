@@ -1,11 +1,16 @@
-from aiohttp import web
-from views import health, index
+import asyncio
+from contextlib import suppress
 
-app = web.Application()
-app.add_routes(
-    [
-        web.get("/", index),
-        web.get("/health", health)
-    ]
-)
-web.run_app(app)
+import logger  # noqa
+from core import core_loop
+from routes import start_web_server
+
+
+async def main():
+    await start_web_server()
+    await core_loop()
+
+
+if __name__ == "__main__":
+    with suppress(KeyboardInterrupt):
+        asyncio.run(main())
