@@ -6,7 +6,7 @@ from core import core_loop
 from routes import start_web_server
 
 
-async def main():
+async def main() -> None:
     await start_web_server()
     await core_loop()
 
